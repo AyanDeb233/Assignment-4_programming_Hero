@@ -1,44 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Application Tracker</title>
     <!-- daisy ui and tailwind css -->
-     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font-awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Momo+Trust+Display&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-       <style>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Momo+Trust+Display&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+    <style>
         * {
             font-family: "Geist", sans-serif;
         }
     </style>
 
 </head>
+
 <body class="w-[68%] bg-gray-200 mt-[60px] mx-auto">
     <h1 class="text-[32px] text-[#002c5c] font-bold">Job Application Tracker</h1>
-    <div class="box flex flex-row justify-between gap-2 item-center mt-[20px] mb-[30px]">
-        <div class="box w-full lg:w-[359px] bg-gray-500 p-5 rounded-[10px] items-center">
+    <div class="box flex flex-col sm:flex-col lg:flex-row justify-between gap-2 item-center mt-[20px] mb-[30px]">
+        <div class="box w-full lg:w-[359px] bg-white p-5 rounded-[10px] items-center">
             <p class="text-[14px] font-semibold">Total</p>
             <p class="text-[18px] text-[#002c5c] font-bold">8</p>
         </div>
-        <div class="box w-full lg:w-[359px] bg-gray-500 p-5 rounded-[10px]">
+        <div class="box w-full lg:w-[359px] bg-white p-5 rounded-[10px]">
             <p class="text-[14px] font-semibold">Interview</p>
             <p class="text-[18px] text-green-500 font-bold">0</p>
         </div>
-        <div class="box w-full lg:w-[359px] bg-gray-500 p-5 rounded-[10px]">
+        <div class="box w-full lg:w-[359px] bg-white p-5 rounded-[10px]">
             <p class="text-[14px] font-semibold">Rejected</p>
             <p class="text-[18px] text-red-600 font-bold">0</p>
         </div>
     </div>
     <hr class="text-gray-300 h-[2px]">
-    <div class="full mt-[20px] mb-[30px] flex flex-row justify-between items-center">
-        <div class="left text-[18px] text-[#002c5c] font-semibold">Available Jobs</div>
-        <div class="right text-[14px] text-gray-600">8 Jobs</div>
+    <div class="full mt-[20px] mb-[20px] flex flex-row justify-between items-center">
+        <div class="left text-[18px] text-[#002c5c] font-semibold ml-[5px]">Available Jobs</div>
+        <div class="right text-[14px] text-gray-600 mr-[5px]">8 Jobs</div>
     </div>
-    
+    <!-- name of each tab group should be unique -->
+    <div class="tabs tabs-box bg-white gap-3">
+        <input type="radio" name="my_tabs_1" class="tab bg-gray-100 w-[80px] checked:bg-[#3b82f6] checked:text-white" aria-label="All" checked="checked"/>
+        <input type="radio" name="my_tabs_1" class="tab bg-gray-100 w-[80px] checked:bg-[#3b82f6] checked:text-white" aria-label="Interview" />
+        <input type="radio" name="my_tabs_1" class="tab bg-gray-100 w-[80px] checked:bg-[#3b82f6] checked:text-white" aria-label="Rejected" />
+    </div>
+
+    <div class="card mt-[20px]">
+        <div class="card1 w-full bg-blue-200 rounded-[8px]">
+            <div class="card-full flex flex-row justify-between items-center p-5">
+                <div class="card-left">
+                    <p class="text-[20px] text-[#002c5c] font-semibold">Mobile First Corp</p>
+                    <p class="text-[18px] text-[#64748b]">React Native Developer</p>
+                </div>
+                <div class="card-right border rounded-[50%] border-gray-300 p-2 cursor-pointer">
+                     <i class="fa-regular fa-trash-can"></i>
+                </div>
+            </div>
+            <p class="text-[16px] text-[#64748b] ml-[20px] tracking-wider">Remote • Full-time • $130,000 - $175,000</p>
+            <div class="w-[113px] text-[14px] text-[#002c5c] font-semibold bg-[#eef4ff] p-3 ml-[20px] mt-[20px] rounded-[5px] text-nowrap">NOT APPLIED</div>
+            <p class="text-[16px] ml-[20px] mt-[8px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+            <div class="full-btn flex gap-2 mt-[20px] ml-[20px] mb-[20px]">
+                <div class="left-btn btn text-green-600 border-green-600">INTERVIEW</div>
+                <div class="right-btn btn text-red-600 border-red-600">REJECTED</div>
+            </div>
+
+
+        </div>
+    </div>
+
 </body>
+
 </html>
