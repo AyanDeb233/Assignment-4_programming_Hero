@@ -9,7 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- font-awesome -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,65 +29,279 @@
 <body class="min-h-screen">
     <header class="w-[68%] mt-[60px] mx-auto">
         <h1 class="text-[32px] text-[#002c5c] font-bold">Job Application Tracker</h1>
-    <div class="box flex flex-col sm:flex-col lg:flex-row justify-between gap-2 item-center mt-[20px] mb-[30px]">
-        <div class="box w-full lg:w-[359px] bg-white p-5 rounded-[10px] items-center">
-            <p class="text-[14px] font-semibold">Total</p>
-            <p class="text-[18px] text-[#002c5c] font-bold">8</p>
+        <div class="box flex flex-col sm:flex-col lg:flex-row justify-between gap-2 item-center mt-[20px] mb-[30px]">
+            <div class="box w-full lg:w-[359px] bg-white p-5 rounded-[10px] items-center">
+                <p class="text-[14px] font-semibold">Total</p>
+                <p class="text-[18px] text-[#002c5c] font-bold">8</p>
+            </div>
+            <div class="box w-full lg:w-[359px] bg-white p-5 rounded-[10px]">
+                <p class="text-[14px] font-semibold">Interview</p>
+                <p class="text-[18px] text-green-500 font-bold">0</p>
+            </div>
+            <div class="box w-full lg:w-[359px] bg-white p-5 rounded-[10px]">
+                <p class="text-[14px] font-semibold">Rejected</p>
+                <p class="text-[18px] text-red-600 font-bold">0</p>
+            </div>
         </div>
-        <div class="box w-full lg:w-[359px] bg-white p-5 rounded-[10px]">
-            <p class="text-[14px] font-semibold">Interview</p>
-            <p class="text-[18px] text-green-500 font-bold">0</p>
+        <hr class="text-gray-300 h-[2px]">
+        <div class="full mt-[20px] mb-[20px] flex flex-row justify-between items-center">
+            <div class="left text-[18px] text-[#002c5c] font-semibold ml-[5px]">Available Jobs</div>
+            <div class="right text-[14px] text-gray-600 mr-[5px]">8 Jobs</div>
         </div>
-        <div class="box w-full lg:w-[359px] bg-white p-5 rounded-[10px]">
-            <p class="text-[14px] font-semibold">Rejected</p>
-            <p class="text-[18px] text-red-600 font-bold">0</p>
-        </div>
-    </div>
-     <hr class="text-gray-300 h-[2px]">
-    <div class="full mt-[20px] mb-[20px] flex flex-row justify-between items-center">
-        <div class="left text-[18px] text-[#002c5c] font-semibold ml-[5px]">Available Jobs</div>
-        <div class="right text-[14px] text-gray-600 mr-[5px]">8 Jobs</div>
-    </div>
     </header>
-    
+
     <!-- main-section  -->
-     <main class="w-[68%] mt-[20px] mx-auto">
-         <!-- name of each tab group should be unique -->
-    <div class="tabs tabs-box bg-gray-100 gap-3">
-        <input type="radio" name="my_tabs_1" class="tab bg-white w-[80px] checked:bg-[#3b82f6] checked:text-white" aria-label="All" checked="checked"/>
-        <input type="radio" name="my_tabs_1" class="tab bg-white w-[80px] checked:bg-[#3b82f6] checked:text-white" aria-label="Interview" />
-        <input type="radio" name="my_tabs_1" class="tab bg-white w-[80px] checked:bg-[#3b82f6] checked:text-white" aria-label="Rejected" />
-    </div>
+    <main class="w-[68%] mt-[20px] mx-auto">
+        <!-- name of each tab group should be unique -->
+        <div class="tabs tabs-box bg-gray-100 gap-3">
+            <input type="radio" name="my_tabs_1" class="tab bg-white w-[80px] checked:bg-[#3b82f6] checked:text-white"
+                aria-label="All" checked="checked" />
+            <input type="radio" name="my_tabs_1" class="tab bg-white w-[80px] checked:bg-[#3b82f6] checked:text-white"
+                aria-label="Interview" />
+            <input type="radio" name="my_tabs_1" class="tab bg-white w-[80px] checked:bg-[#3b82f6] checked:text-white"
+                aria-label="Rejected" />
+        </div>
 
-    <div class="default-part w-full h-[400px] bg-white shadow-md rounded-[8px] flex flex-col justify-center items-center p-10 mt-[20px]">
-        <img src="./photo/jobs.png" alt="">
-        <h1 class="text-[24px] text-[#002c5c] font-bold mt-[10px]">No Jobs Available</h1>
-        <p class="text-[16px] text-gray-600">Check back soon for new job opportunities</p>
-    </div>
+        <div
+            class="default-part w-full h-[400px] bg-white shadow-md rounded-[8px] flex flex-col justify-center items-center p-10 mt-[20px]">
+            <img src="./photo/jobs.png" alt="">
+            <h1 class="text-[24px] text-[#002c5c] font-bold mt-[10px]">No Jobs Available</h1>
+            <p class="text-[16px] text-gray-600">Check back soon for new job opportunities</p>
+        </div>
 
-    <div class="card mt-[20px]">
-        <div class="card1 w-full bg-white shadow-md rounded-[8px]">
-            <div class="card-full flex flex-row justify-between items-center p-5">
-                <div class="card-left">
-                    <p class="text-[20px] text-[#002c5c] font-semibold">Mobile First Corp</p>
-                    <p class="text-[18px] text-[#64748b]">React Native Developer</p>
+        <div class="card mt-[20px] mb-[50px] flex flex-col gap-5">
+
+            <!-- card1  -->
+
+            <div class="card1 w-full bg-white shadow-md rounded-[8px]">
+                <div class="card-full flex flex-row justify-between p-5">
+                    <div class="card-left">
+                        <p class="company text-[20px] text-[#002c5c] font-semibold">Mobile First Corp</p>
+                        <p class="job-position text-[18px] text-[#64748b]">React Native Developer</p>
+                        <p class="about-job text-[16px] my-[20px] text-[#64748b] tracking-wider">Remote • Full-time • $130,000 - $175,000</p>
+                        <div
+                            class="status w-[113px] h-[36px] text-[14px] text-[#002c5c] font-semibold bg-[#eef4ff] mb-[8px] p-3 text-nowrap rounded-[5px]">
+                            NOT APPLIED</div>
+                        <p class="notes text-[16px] mt-[8px] text-[#313a49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <div class="full-btn flex gap-2 mt-[20px] mb-[20px]">
+                            <div class="interview-btn btn text-green-600 border-green-600">INTERVIEW</div>
+                            <div class="rejected-btn btn text-red-600 border-red-600">REJECTED</div>
+                        </div>
+
+                    </div>
+                    <div class="delete-btn card-right border-gray-300 p-2 cursor-pointer">
+                        <div class="border border-gray-300 rounded-[50%] p-2">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-right border rounded-[50%] border-gray-300 p-2 cursor-pointer">
-                     <i class="fa-regular fa-trash-can"></i>
-                </div>
+
+
             </div>
-            <p class="text-[16px] text-[#64748b] ml-[20px] tracking-wider">Remote • Full-time • $130,000 - $175,000</p>
-            <div class="w-[113px] text-[14px] text-[#002c5c] font-semibold bg-[#eef4ff] p-3 ml-[20px] mt-[20px] rounded-[5px] text-nowrap">NOT APPLIED</div>
-            <p class="text-[16px] ml-[20px] mt-[8px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-            <div class="full-btn flex gap-2 mt-[20px] ml-[20px] mb-[20px]">
-                <div class="left-btn btn text-green-600 border-green-600">INTERVIEW</div>
-                <div class="right-btn btn text-red-600 border-red-600">REJECTED</div>
+
+            <!-- card2  -->
+
+            <div class="card2 w-full bg-white shadow-md rounded-[8px]">
+                <div class="card-full flex flex-row justify-between p-5">
+                    <div class="card-left">
+                        <p class="company text-[20px] text-[#002c5c] font-semibold">WebFlow Agency</p>
+                        <p class="job-position text-[18px] text-[#64748b]">Web Designer & Developer</p>
+                        <p class="about-job text-[16px] my-[20px] text-[#64748b] tracking-wider">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
+                        <div
+                            class="status w-[113px] h-[36px] text-[14px] text-[#002c5c] font-semibold bg-[#eef4ff] mb-[8px] p-3 text-nowrap rounded-[5px]">
+                            NOT APPLIED</div>
+                        <p class="notes text-[16px] mt-[8px] text-[#313a49]">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                        <div class="full-btn flex gap-2 mt-[20px] mb-[20px]">
+                            <div class="interview-btn btn text-green-600 border-green-600">INTERVIEW</div>
+                            <div class="rejected-btn btn text-red-600 border-red-600">REJECTED</div>
+                        </div>
+
+                    </div>
+                    <div class="delete-btn card-right border-gray-300 p-2 cursor-pointer">
+                        <div class="border border-gray-300 rounded-[50%] p-2">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <!-- card3  -->
+
+           <div class="card3 w-full bg-white shadow-md rounded-[8px]">
+                <div class="card-full flex flex-row justify-between p-5">
+                    <div class="card-left">
+                        <p class="company text-[20px] text-[#002c5c] font-semibold">DataViz Solutions   </p>
+                        <p class="job-position text-[18px] text-[#64748b]">Data Visualization Specialist</p>
+                        <p class="about-job text-[16px] my-[20px] text-[#64748b] tracking-wider">Boston, MA • Full-time • $125,000 - $165,000</p>
+                        <div
+                            class="status w-[113px] h-[36px] text-[14px] text-[#002c5c] font-semibold bg-[#eef4ff] mb-[8px] p-3 text-nowrap rounded-[5px]">
+                            NOT APPLIED</div>
+                        <p class="notes text-[16px] mt-[8px] text-[#313a49]">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
+                        <div class="full-btn flex gap-2 mt-[20px] mb-[20px]">
+                            <div class="interview-btn btn text-green-600 border-green-600">INTERVIEW</div>
+                            <div class="rejected-btn btn text-red-600 border-red-600">REJECTED</div>
+                        </div>
+
+                    </div>
+                    <div class="delete-btn card-right border-gray-300 p-2 cursor-pointer">
+                        <div class="border border-gray-300 rounded-[50%] p-2">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- card4  -->
+
+            <div class="card4 w-full bg-white shadow-md rounded-[8px]">
+                <div class="card-full flex flex-row justify-between p-5">
+                    <div class="card-left">
+                        <p class="company text-[20px] text-[#002c5c] font-semibold">CloudFirst Inc</p>
+                        <p class="job-position text-[18px] text-[#64748b]">Backend Developer</p>
+                        <p class="about-job text-[16px] my-[20px] text-[#64748b] tracking-wider">Seattle, WA • Full-time • $140,000 - $190,000</p>
+                        <div
+                            class="status w-[113px] h-[36px] text-[14px] text-[#002c5c] font-semibold bg-[#eef4ff] mb-[8px] p-3 text-nowrap rounded-[5px]">
+                            NOT APPLIED</div>
+                        <p class="notes text-[16px] mt-[8px] text-[#313a49]">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
+                        <div class="full-btn flex gap-2 mt-[20px] mb-[20px]">
+                            <div class="interview-btn btn text-green-600 border-green-600">INTERVIEW</div>
+                            <div class="rejected-btn btn text-red-600 border-red-600">REJECTED</div>
+                        </div>
+
+                    </div>
+                    <div class="delete-btn card-right border-gray-300 p-2 cursor-pointer">
+                        <div class="border border-gray-300 rounded-[50%] p-2">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- card5 -->
+
+           <div class="card5 w-full bg-white shadow-md rounded-[8px]">
+                <div class="card-full flex flex-row justify-between p-5">
+                    <div class="card-left">
+                        <p class="company text-[20px] text-[#002c5c] font-semibold">Innovation Labs</p>
+                        <p class="job-position text-[18px] text-[#64748b]">UI/UX Engineer</p>
+                        <p class="about-job text-[16px] my-[20px] text-[#64748b] tracking-wider">Austin, TX • Full-time • $110,000 - $150,000</p>
+                        <div
+                            class="status w-[113px] h-[36px] text-[14px] text-[#002c5c] font-semibold bg-[#eef4ff] mb-[8px] p-3 text-nowrap rounded-[5px]">
+                            NOT APPLIED</div>
+                        <p class="notes text-[16px] mt-[8px] text-[#313a49]">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
+                        <div class="full-btn flex gap-2 mt-[20px] mb-[20px]">
+                            <div class="interview-btn btn text-green-600 border-green-600">INTERVIEW</div>
+                            <div class="rejected-btn btn text-red-600 border-red-600">REJECTED</div>
+                        </div>
+
+                    </div>
+                    <div class="delete-btn card-right border-gray-300 p-2 cursor-pointer">
+                        <div class="border border-gray-300 rounded-[50%] p-2">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- card6 -->
+
+            <div class="card6 w-full bg-white shadow-md rounded-[8px]">
+                <div class="card-full flex flex-row justify-between p-5">
+                    <div class="card-left">
+                        <p class="company text-[20px] text-[#002c5c] font-semibold">MegaCorp Solutions</p>
+                        <p class="job-position text-[18px] text-[#64748b]">JavaScript Developer</p>
+                        <p class="about-job text-[16px] my-[20px] text-[#64748b] tracking-wider">New York, NY •
+                            Full-time • $130,000 - $170,000</p>
+                        <div
+                            class="status w-[113px] h-[36px] text-[14px] text-[#002c5c] font-semibold bg-[#eef4ff] mb-[8px] p-3 text-nowrap rounded-[5px]">
+                            NOT APPLIED</div>
+                        <p class="notes text-[16px] mt-[8px] text-[#313a49]">Build enterprise applications with JavaScript
+                            and modern frameworks. We offer competitive compensation, health insurance, and professional
+                            development opportunities.</p>
+                        <div class="full-btn flex gap-2 mt-[20px] mb-[20px]">
+                            <div class="interview-btn btn text-green-600 border-green-600">INTERVIEW</div>
+                            <div class="rejected-btn btn text-red-600 border-red-600">REJECTED</div>
+                        </div>
+
+                    </div>
+                    <div class="delete-btn card-right border-gray-300 p-2 cursor-pointer">
+                        <div class="border border-gray-300 rounded-[50%] p-2">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- card7 -->
+
+            <div class="card7 w-full bg-white shadow-md rounded-[8px]">
+                <div class="card-full flex flex-row justify-between p-5">
+                    <div class="card-left">
+                        <p class="company text-[20px] text-[#002c5c] font-semibold">StartupXYZ</p>
+                        <p class="job-position text-[18px] text-[#64748b]">Full Stack Engineer</p>
+                        <p class="about-job text-[16px] my-[20px] text-[#64748b] tracking-wider">Remote • Full-time • $120,000 - $160,000</p>
+                        <div
+                            class="status w-[113px] h-[36px] text-[14px] text-[#002c5c] font-semibold bg-[#eef4ff] mb-[8px] p-3 text-nowrap rounded-[5px]">
+                            NOT APPLIED</div>
+                        <p class="notes text-[16px] mt-[8px] text-[#313a49]">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
+                        <div class="full-btn flex gap-2 mt-[20px] mb-[20px]">
+                            <div class="interview-btn btn text-green-600 border-green-600">INTERVIEW</div>
+                            <div class="rejected-btn btn text-red-600 border-red-600">REJECTED</div>
+                        </div>
+
+                    </div>
+                    <div class="delete-btn card-right border-gray-300 p-2 cursor-pointer">
+                        <div class="border border-gray-300 rounded-[50%] p-2">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- card8  -->
+
+           <div class="card8 w-full bg-white shadow-md rounded-[8px]">
+                <div class="card-full flex flex-row justify-between p-5">
+                    <div class="card-left">
+                        <p class="company text-[20px] text-[#002c5c] font-semibold">TechCorp Industries</p>
+                        <p class="job-position text-[18px] text-[#64748b]">Senior Frontend Developer</p>
+                        <p class="about-job text-[16px] my-[20px] text-[#64748b] tracking-wider">San Francisco, CA • Full-time • $130,000 - $175,000</p>
+                        <div
+                            class="status w-[113px] h-[36px] text-[14px] text-[#002c5c] font-semibold bg-[#eef4ff] mb-[8px] p-3 text-nowrap rounded-[5px]">
+                            NOT APPLIED</div>
+                        <p class="notes text-[16px] mt-[8px] text-[#313a49]">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
+                        <div class="full-btn flex gap-2 mt-[20px] mb-[20px]">
+                            <div class="interview-btn btn text-green-600 border-green-600">INTERVIEW</div>
+                            <div class="rejected-btn btn text-red-600 border-red-600">REJECTED</div>
+                        </div>
+
+                    </div>
+                    <div class="delete-btn card-right border-gray-300 p-2 cursor-pointer">
+                        <div class="border border-gray-300 rounded-[50%] p-2">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
 
 
         </div>
-    </div>
-     </main>
+    </main>
 
 </body>
 
