@@ -45,11 +45,11 @@ function toggling(id){
 }
 
 mainContainer.addEventListener("click", function(event) {
-    console.log(event.target.classList.contains("interview-btn"));
 
     if (event.target.classList.contains("interview-btn")) {
 
-        let parentNode = event.target.parentNode.parentNode.parentNode.parentNode;
+        let parentNode = event.target.parentNode.parentNode.parentNode;
+
         const companyName = parentNode.querySelector(".company").innerText;
         const jobPosition = parentNode.querySelector(".job-position").innerText;
         const aboutJob = parentNode.querySelector(".about-job").innerText;
@@ -83,7 +83,7 @@ mainContainer.addEventListener("click", function(event) {
 
     else if (event.target.classList.contains("rejected-btn")) {
 
-    let parentNode = event.target.parentNode.parentNode.parentNode.parentNode;
+    let parentNode = event.target.parentNode.parentNode.parentNode;
     const companyName = parentNode.querySelector(".company").innerText;
     const jobPosition = parentNode.querySelector(".job-position").innerText;
     const aboutJob = parentNode.querySelector(".about-job").innerText;
@@ -102,8 +102,6 @@ mainContainer.addEventListener("click", function(event) {
         statusDiv: "REJECTED",
         notes
     }
-    console.log(cardinfo);
-
     const rejected = rejectedList.find(item => item.companyName == cardinfo.companyName);
     if(!rejected){
         rejectedList.push(cardinfo);
@@ -118,6 +116,16 @@ mainContainer.addEventListener("click", function(event) {
     calculateCounts();
 
     }
+    else if(event.target.classList.contains("fa-trash-can")){
+        let parentNode = event.target.parentNode.parentNode.parentNode.parentNode;
+        parentNode.remove();
+
+        const CompanyName = parentNode.querySelector(".company");
+        const companyNaming = CompanyName.innerText;
+        interviewList = interviewList.filter(item => item.companyName != companyNaming);
+        rejectedList = rejectedList.filter(item => item.companyName != companyNaming);
+        calculateCounts();
+    }
 
 })
 
@@ -125,7 +133,7 @@ function renderInterview(){
     filterSection.innerHTML = "";
     if(interviewList.length === 0){
         filterSection.innerHTML = `<div id="default-part" class="default-part w-full h-[400px] bg-white shadow-md rounded-[8px] flex flex-col justify-center items-center p-10 mt-[20px] mb-[50px]">
-            <img src="./photo/jobs.png" alt="">
+            <div> <img src="./photo/jobs.png" alt=""></div>
             <h1 class="text-[24px] text-[#002c5c] font-bold mt-[10px]">No Jobs Available</h1>
             <p class="text-[16px] text-gray-600">Check back soon for new job opportunities</p>
         </div>`

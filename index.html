@@ -52,7 +52,6 @@
 
     <!-- main-section  -->
     <main class="w-[68%] mt-[20px] mx-auto">
-        <!-- name of each tab group should be unique -->
         <div class="tabs tabs-box bg-gray-100 gap-3">
             <input type="radio" id="all-filter-btn" onclick="toggling('all-filter-btn')" name="my_tabs_1" class="tab bg-white w-[80px] checked:bg-[#3b82f6] checked:text-white"
                 aria-label="All" checked="checked" />
@@ -70,12 +69,22 @@
 
             <!-- card1  -->
 
-            <div class="card1 w-full bg-white shadow-md rounded-[8px]">
+            <div class="card1 w-[100%] p-2 bg-white shadow-md rounded-[8px]">
                 <div class="card-full flex flex-row justify-between p-5">
                     <div class="card-left">
                         <p class="company text-[20px] text-[#002c5c] font-semibold">Mobile First Corp</p>
                         <p class="job-position text-[18px] text-[#64748b]">React Native Developer</p>
-                        <p class="about-job text-[16px] my-[20px] text-[#64748b] tracking-wider">Remote • Full-time • $130,000 - $175,000</p>
+                    </div>
+                     
+                         <div class="delete-btn">
+                        <div class="border border-gray-300 rounded-[50%] p-2 cursor-pointer">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
+                        </div>
+                     
+                </div>
+                <div class="ml-[20px]">
+                     <p class="about-job text-[16px] mb-[20px] text-[#64748b] tracking-wider">Remote • Full-time • $130,000 - $175,000</p>
                         <div
                             class="status w-[113px] h-[36px] text-[14px] text-[#002c5c] font-semibold bg-[#eef4ff] mb-[8px] p-3 text-nowrap rounded-[5px]">
                             NOT APPLIED</div>
@@ -85,12 +94,6 @@
                             <div class="rejected-btn btn text-red-600 border-red-600">REJECTED</div>
                         </div>
 
-                    </div>
-                    <div class="delete-btn card-right border-gray-300 p-2 cursor-pointer">
-                        <div class="border border-gray-300 rounded-[50%] p-2">
-                            <i class="fa-regular fa-trash-can"></i>
-                        </div>
-                    </div>
                 </div>
 
 
@@ -98,12 +101,22 @@
 
             <!-- card2  -->
 
-            <div class="card2 w-full bg-white shadow-md rounded-[8px]">
+            <div class="card2 w-[100%] p-2 bg-white shadow-md rounded-[8px]">
                 <div class="card-full flex flex-row justify-between p-5">
                     <div class="card-left">
                         <p class="company text-[20px] text-[#002c5c] font-semibold">WebFlow Agency</p>
                         <p class="job-position text-[18px] text-[#64748b]">Web Designer & Developer</p>
-                        <p class="about-job text-[16px] my-[20px] text-[#64748b] tracking-wider">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
+                    </div>
+                     
+                         <div class="delete-btn">
+                        <div class="border border-gray-300 rounded-[50%] p-2 cursor-pointer">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
+                        </div>
+                     
+                </div>
+                <div class="ml-[20px]">
+                     <p class="about-job text-[16px] mb-[20px] text-[#64748b] tracking-wider">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
                         <div
                             class="status w-[113px] h-[36px] text-[14px] text-[#002c5c] font-semibold bg-[#eef4ff] mb-[8px] p-3 text-nowrap rounded-[5px]">
                             NOT APPLIED</div>
@@ -113,12 +126,6 @@
                             <div class="rejected-btn btn text-red-600 border-red-600">REJECTED</div>
                         </div>
 
-                    </div>
-                    <div class="delete-btn card-right border-gray-300 p-2 cursor-pointer">
-                        <div class="border border-gray-300 rounded-[50%] p-2">
-                            <i class="fa-regular fa-trash-can"></i>
-                        </div>
-                    </div>
                 </div>
 
 
@@ -127,12 +134,22 @@
 
             <!-- card3  -->
 
-           <div class="card3 w-full bg-white shadow-md rounded-[8px]">
+           <div class="card3 w-[100%] p-2 bg-white shadow-md rounded-[8px]">
                 <div class="card-full flex flex-row justify-between p-5">
                     <div class="card-left">
-                        <p class="company text-[20px] text-[#002c5c] font-semibold">DataViz Solutions   </p>
+                        <p class="company text-[20px] text-[#002c5c] font-semibold">DataViz Solutions</p>
                         <p class="job-position text-[18px] text-[#64748b]">Data Visualization Specialist</p>
-                        <p class="about-job text-[16px] my-[20px] text-[#64748b] tracking-wider">Boston, MA • Full-time • $125,000 - $165,000</p>
+                    </div>
+                     
+                         <div class="delete-btn">
+                        <div class="border border-gray-300 rounded-[50%] p-2 cursor-pointer">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
+                        </div>
+                     
+                </div>
+                <div class="ml-[20px]">
+                     <p class="about-job text-[16px] mb-[20px] text-[#64748b] tracking-wider">Boston, MA • Full-time • $125,000 - $165,000</p>
                         <div
                             class="status w-[113px] h-[36px] text-[14px] text-[#002c5c] font-semibold bg-[#eef4ff] mb-[8px] p-3 text-nowrap rounded-[5px]">
                             NOT APPLIED</div>
@@ -142,12 +159,6 @@
                             <div class="rejected-btn btn text-red-600 border-red-600">REJECTED</div>
                         </div>
 
-                    </div>
-                    <div class="delete-btn card-right border-gray-300 p-2 cursor-pointer">
-                        <div class="border border-gray-300 rounded-[50%] p-2">
-                            <i class="fa-regular fa-trash-can"></i>
-                        </div>
-                    </div>
                 </div>
 
 
@@ -155,12 +166,22 @@
 
             <!-- card4  -->
 
-            <div class="card4 w-full bg-white shadow-md rounded-[8px]">
+            <div class="card4 w-[100%] p-2 bg-white shadow-md rounded-[8px]">
                 <div class="card-full flex flex-row justify-between p-5">
                     <div class="card-left">
                         <p class="company text-[20px] text-[#002c5c] font-semibold">CloudFirst Inc</p>
                         <p class="job-position text-[18px] text-[#64748b]">Backend Developer</p>
-                        <p class="about-job text-[16px] my-[20px] text-[#64748b] tracking-wider">Seattle, WA • Full-time • $140,000 - $190,000</p>
+                    </div>
+                     
+                         <div class="delete-btn">
+                        <div class="border border-gray-300 rounded-[50%] p-2 cursor-pointer">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
+                        </div>
+                     
+                </div>
+                <div class="ml-[20px]">
+                     <p class="about-job text-[16px] mb-[20px] text-[#64748b] tracking-wider">Seattle, WA • Full-time • $140,000 - $190,000</p>
                         <div
                             class="status w-[113px] h-[36px] text-[14px] text-[#002c5c] font-semibold bg-[#eef4ff] mb-[8px] p-3 text-nowrap rounded-[5px]">
                             NOT APPLIED</div>
@@ -170,12 +191,6 @@
                             <div class="rejected-btn btn text-red-600 border-red-600">REJECTED</div>
                         </div>
 
-                    </div>
-                    <div class="delete-btn card-right border-gray-300 p-2 cursor-pointer">
-                        <div class="border border-gray-300 rounded-[50%] p-2">
-                            <i class="fa-regular fa-trash-can"></i>
-                        </div>
-                    </div>
                 </div>
 
 
@@ -183,12 +198,22 @@
 
             <!-- card5 -->
 
-           <div class="card5 w-full bg-white shadow-md rounded-[8px]">
+           <div class="card5 w-[100%] p-2 bg-white shadow-md rounded-[8px]">
                 <div class="card-full flex flex-row justify-between p-5">
                     <div class="card-left">
                         <p class="company text-[20px] text-[#002c5c] font-semibold">Innovation Labs</p>
                         <p class="job-position text-[18px] text-[#64748b]">UI/UX Engineer</p>
-                        <p class="about-job text-[16px] my-[20px] text-[#64748b] tracking-wider">Austin, TX • Full-time • $110,000 - $150,000</p>
+                    </div>
+                     
+                         <div class="delete-btn">
+                        <div class="border border-gray-300 rounded-[50%] p-2 cursor-pointer">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
+                        </div>
+                     
+                </div>
+                <div class="ml-[20px]">
+                     <p class="about-job text-[16px] mb-[20px] text-[#64748b] tracking-wider">Austin, TX • Full-time • $110,000 - $150,000</p>
                         <div
                             class="status w-[113px] h-[36px] text-[14px] text-[#002c5c] font-semibold bg-[#eef4ff] mb-[8px] p-3 text-nowrap rounded-[5px]">
                             NOT APPLIED</div>
@@ -198,12 +223,6 @@
                             <div class="rejected-btn btn text-red-600 border-red-600">REJECTED</div>
                         </div>
 
-                    </div>
-                    <div class="delete-btn card-right border-gray-300 p-2 cursor-pointer">
-                        <div class="border border-gray-300 rounded-[50%] p-2">
-                            <i class="fa-regular fa-trash-can"></i>
-                        </div>
-                    </div>
                 </div>
 
 
@@ -211,30 +230,31 @@
 
             <!-- card6 -->
 
-            <div class="card6 w-full bg-white shadow-md rounded-[8px]">
+            <div class="card6 w-[100%] p-2 bg-white shadow-md rounded-[8px]">
                 <div class="card-full flex flex-row justify-between p-5">
                     <div class="card-left">
                         <p class="company text-[20px] text-[#002c5c] font-semibold">MegaCorp Solutions</p>
                         <p class="job-position text-[18px] text-[#64748b]">JavaScript Developer</p>
-                        <p class="about-job text-[16px] my-[20px] text-[#64748b] tracking-wider">New York, NY •
-                            Full-time • $130,000 - $170,000</p>
+                    </div>
+                     
+                         <div class="delete-btn">
+                        <div class="border border-gray-300 rounded-[50%] p-2 cursor-pointer">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
+                        </div>
+                     
+                </div>
+                <div class="ml-[20px]">
+                     <p class="about-job text-[16px] mb-[20px] text-[#64748b] tracking-wider">New York, NY • Full-time • $130,000 - $170,000</p>
                         <div
                             class="status w-[113px] h-[36px] text-[14px] text-[#002c5c] font-semibold bg-[#eef4ff] mb-[8px] p-3 text-nowrap rounded-[5px]">
                             NOT APPLIED</div>
-                        <p class="notes text-[16px] mt-[8px] text-[#313a49]">Build enterprise applications with JavaScript
-                            and modern frameworks. We offer competitive compensation, health insurance, and professional
-                            development opportunities.</p>
+                        <p class="notes text-[16px] mt-[8px] text-[#313a49]">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
                         <div class="full-btn flex gap-2 mt-[20px] mb-[20px]">
                             <div class="interview-btn btn text-green-600 border-green-600">INTERVIEW</div>
                             <div class="rejected-btn btn text-red-600 border-red-600">REJECTED</div>
                         </div>
 
-                    </div>
-                    <div class="delete-btn card-right border-gray-300 p-2 cursor-pointer">
-                        <div class="border border-gray-300 rounded-[50%] p-2">
-                            <i class="fa-regular fa-trash-can"></i>
-                        </div>
-                    </div>
                 </div>
 
 
@@ -242,12 +262,22 @@
 
             <!-- card7 -->
 
-            <div class="card7 w-full bg-white shadow-md rounded-[8px]">
+            <div class="card7 w-[100%] p-2 bg-white shadow-md rounded-[8px]">
                 <div class="card-full flex flex-row justify-between p-5">
                     <div class="card-left">
                         <p class="company text-[20px] text-[#002c5c] font-semibold">StartupXYZ</p>
                         <p class="job-position text-[18px] text-[#64748b]">Full Stack Engineer</p>
-                        <p class="about-job text-[16px] my-[20px] text-[#64748b] tracking-wider">Remote • Full-time • $120,000 - $160,000</p>
+                    </div>
+                     
+                         <div class="delete-btn">
+                        <div class="border border-gray-300 rounded-[50%] p-2 cursor-pointer">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
+                        </div>
+                     
+                </div>
+                <div class="ml-[20px]">
+                     <p class="about-job text-[16px] mb-[20px] text-[#64748b] tracking-wider">Remote • Full-time • $120,000 - $160,000</p>
                         <div
                             class="status w-[113px] h-[36px] text-[14px] text-[#002c5c] font-semibold bg-[#eef4ff] mb-[8px] p-3 text-nowrap rounded-[5px]">
                             NOT APPLIED</div>
@@ -257,12 +287,6 @@
                             <div class="rejected-btn btn text-red-600 border-red-600">REJECTED</div>
                         </div>
 
-                    </div>
-                    <div class="delete-btn card-right border-gray-300 p-2 cursor-pointer">
-                        <div class="border border-gray-300 rounded-[50%] p-2">
-                            <i class="fa-regular fa-trash-can"></i>
-                        </div>
-                    </div>
                 </div>
 
 
@@ -270,12 +294,22 @@
 
             <!-- card8  -->
 
-           <div class="card8 w-full bg-white shadow-md rounded-[8px]">
+           <div class="card8 w-[100%] p-2 bg-white shadow-md rounded-[8px]">
                 <div class="card-full flex flex-row justify-between p-5">
                     <div class="card-left">
                         <p class="company text-[20px] text-[#002c5c] font-semibold">TechCorp Industries</p>
                         <p class="job-position text-[18px] text-[#64748b]">Senior Frontend Developer</p>
-                        <p class="about-job text-[16px] my-[20px] text-[#64748b] tracking-wider">San Francisco, CA • Full-time • $130,000 - $175,000</p>
+                    </div>
+                     
+                         <div class="delete-btn">
+                        <div class="border border-gray-300 rounded-[50%] p-2 cursor-pointer">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
+                        </div>
+                     
+                </div>
+                <div class="ml-[20px]">
+                     <p class="about-job text-[16px] mb-[20px] text-[#64748b] tracking-wider">San Francisco, CA • Full-time • $130,000 - $175,000</p>
                         <div
                             class="status w-[113px] h-[36px] text-[14px] text-[#002c5c] font-semibold bg-[#eef4ff] mb-[8px] p-3 text-nowrap rounded-[5px]">
                             NOT APPLIED</div>
@@ -285,12 +319,6 @@
                             <div class="rejected-btn btn text-red-600 border-red-600">REJECTED</div>
                         </div>
 
-                    </div>
-                    <div class="delete-btn card-right border-gray-300 p-2 cursor-pointer">
-                        <div class="border border-gray-300 rounded-[50%] p-2">
-                            <i class="fa-regular fa-trash-can"></i>
-                        </div>
-                    </div>
                 </div>
 
 
