@@ -25,7 +25,4 @@ Ans :
 preventDefault() method is used to prevent the default behavior of the browser. At this moment it does not stop event bubbling to its parent element, whereas stopPropagation() method stops the event bubbling to its parent element and does not prevent the default behavior of the browser.
 
 
-.
-
-
 
