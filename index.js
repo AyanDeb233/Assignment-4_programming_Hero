@@ -18,7 +18,6 @@ const rejectedFilterBtn = document.getElementById("rejected-filter-btn");
 const cardcounting = document.getElementById("cardCount");
 const oftexting = document.getElementById("ofText");
 const totalcounting = document.getElementById("totaljobCount");
-let totalJobsCount = allCards.children.length;
 
 function calculateCounts() {
     total.innerText = allCards.children.length;
@@ -28,6 +27,7 @@ function calculateCounts() {
 calculateCounts();
 
 function displayCount() {
+ let totalJobsCount = allCards.children.length;
   const totalCountingdisplay = interviewList.length + rejectedList.length;
   
   if (totalCountingdisplay === 0) {
@@ -139,9 +139,10 @@ mainContainer.addEventListener("click", function(event) {
     }
     else if(event.target.classList.contains("fa-trash-can")){
         let parentNode = event.target.parentNode.parentNode.parentNode.parentNode;
+        const CompanyName = parentNode.querySelector(".company");
+
         parentNode.remove();
 
-        const CompanyName = parentNode.querySelector(".company");
         const companyNaming = CompanyName.innerText;
         interviewList = interviewList.filter(item => item.companyName != companyNaming);
         rejectedList = rejectedList.filter(item => item.companyName != companyNaming);
