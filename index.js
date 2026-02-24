@@ -15,13 +15,31 @@ const allFilterBtn = document.getElementById("all-filter-btn");
 const interviewFilterBtn = document.getElementById("interview-filter-btn");
 const rejectedFilterBtn = document.getElementById("rejected-filter-btn");
 
+const cardcounting = document.getElementById("cardCount");
+const oftexting = document.getElementById("ofText");
+const totalcounting = document.getElementById("totaljobCount");
+let totalJobsCount = allCards.children.length;
+
 function calculateCounts() {
     total.innerText = allCards.children.length;
     interviewCount.innerText = interviewList.length;
     rejectedCount.innerText = rejectedList.length;
-    jobCount.innerText = allCards.children.length;
 }
 calculateCounts();
+
+function displayCount() {
+  const totalCountingdisplay = interviewList.length + rejectedList.length;
+  
+  if (totalCountingdisplay === 0) {
+    cardcounting.innerText = totalJobsCount;
+    oftexting.classList.add('hidden'); 
+  } else {
+    cardcounting.innerText = totalCountingdisplay;
+    oftexting.classList.remove('hidden'); 
+    totalcounting.innerText = totalJobsCount;
+  }
+}
+displayCount();
 
 function toggling(id){
  
@@ -42,6 +60,7 @@ function toggling(id){
 
         renderRejected();
     }
+    displayCount();
 }
 
 mainContainer.addEventListener("click", function(event) {
@@ -79,6 +98,7 @@ mainContainer.addEventListener("click", function(event) {
     }
 
     calculateCounts();
+    displayCount();
     }
 
     else if (event.target.classList.contains("rejected-btn")) {
@@ -114,6 +134,7 @@ mainContainer.addEventListener("click", function(event) {
     }
 
     calculateCounts();
+    displayCount();
 
     }
     else if(event.target.classList.contains("fa-trash-can")){
@@ -125,6 +146,7 @@ mainContainer.addEventListener("click", function(event) {
         interviewList = interviewList.filter(item => item.companyName != companyNaming);
         rejectedList = rejectedList.filter(item => item.companyName != companyNaming);
         calculateCounts();
+        displayCount();
     }
 
 })
